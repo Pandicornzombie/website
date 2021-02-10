@@ -10,6 +10,18 @@ module.exports = {
   ],
   plugins: [
   ],
-  // add your custom rules here
-  rules: {}
+  rules: {
+    'vue/script-indent': [
+      'error',
+      2, {
+        baseIndent: 1
+      }
+    ]
+  },
+  overrides: [{
+    files: ['*.vue'],
+    rules: {
+      indent: 'off'
+    }
+  }]
 }
