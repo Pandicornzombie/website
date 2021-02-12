@@ -9,16 +9,12 @@
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint": "yarn lint:js && yarn lint:style"
+    "lint": "yarn lint:js && yarn lint:style",
+    "postinstall": "husky install"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
     "*.{css,vue}": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
