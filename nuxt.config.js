@@ -65,5 +65,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    // Copied from
+    // https://github.com/nuxt/nuxt.js/issues/3828#issuecomment-658774154.
+    devMiddleware: {
+      headers: {
+        'Cache-Control': 'no-store',
+        Vary: '*'
+      }
+    }
   }
 }
